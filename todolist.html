@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<title>TO DO LIST</title>
+<h1>TO DO LIST</h1>
+<head>
+    <style>
+        body{
+            margin:0;
+            background-color: #616091;
+            padding:25px;
+        }
+        h1{
+            color:aqua;
+            text-align: center;
+            background-color:#04041c;
+            border: none;
+            border-radius:16px;
+            margin:16px;
+
+            
+        }
+        div{
+            margin:16px;
+            padding:8px;
+            background-color:#04041c;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+            border-radius: 16px;
+            border: none;
+        }
+        #container{
+            margin:8px;
+            padding:24px;
+            color:white;
+            background-color: #04041c;
+            text-align: center;
+        }
+        #input{
+            color:white;
+            background-color:#04041c;
+            border:none;
+            border-bottom: 1px solid #616091;
+            border-left: 1px solid #616091;
+        }
+        #btn{
+            border:none;
+            border-radius:8px;
+            background-color: aquamarine;
+
+        }
+        
+
+        
+
+    </style>
+</head>
+<div>
+    <div id="container">
+        <input type="text"  id="input" placeholder="enter your text here">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <button id="btn">Add to do</button>
+        <ul class="ul" style="list-style-type:none;">
+        </ul>
+    </div>
+    <script>
+        document.getElementById('btn').addEventListener('click',
+        function(){
+            let  input= document.getElementById('input').value;
+            let elem=document.createElement('li');
+            let btn1=document.createElement('button');
+            let btn2=document.createElement('button');
+            btn1.innerText="Done";
+            btn2.innerText="Delete";
+            elem.innerText=input;
+            let ul=document.querySelector('ul');
+            ul.appendChild(elem);
+            elem.appendChild(btn1);
+            elem.appendChild(btn2);
+        }
+        );
+        btn1.addEventListener('click',
+        function(){
+            elem.style.textDecoration="line-through";
+        }
+        );
+        btn2.addEventListener('click',
+        function(){
+            elem.remove();
+        }
+        );
+        document.getElementById('input').value="";
+        
+
+        
+    
+
+
+            
+
+        
+
+    </script>
+</div>

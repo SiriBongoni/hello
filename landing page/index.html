@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T20 world cup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class ="logo">
+            <img src="images/pngtree-t20-world-cu.png" alt="logo">
+        </div>
+        <div class="background">
+            <img src="images/india logo.jpg" id="logobg" alt="background">
+        </div>
+        <div class="heading">
+            <h1 id="head">
+                Indian Cricket team
+            </h1>
+                <p>There are, lately, three kinds of cricket around. There is the Twenty20 (T20) cricket of 2003, then there is the one-day cricket of around the late 1960s, and there is the traditional Test cricket, which has been going on almost forever, since 1877.</p>
+            <button>watch matches</button>
+        </div>
+        <div class="image">
+            <img src="images/in team.jpg" id="myimage">
+        </div>
+        <div class="navbar">
+            <ul>
+                <li>Home</li>
+                <li>Team</li>
+                <li>Performance</li>
+                <li>Rank</li>
+            </ul>
+        </div>
+        <div class="empty">
+
+        </div>
+        <div class="list">
+            <ol>
+                <li onclick="myFun('images/bang-team.png','green','Bangladesh cricket team','images/bang-logo.png')">BANG</li>
+                <li onclick="myFun('images/in-team.jpg','#056899','Indian cricket team','images/india logo.jpg')">INDIA</li>
+                <li onclick="myFun('images/aus-team.jpg','#d5d509','Australia cricket team','images/aus-logo.jpg')">AUS</li>
+            </ol>
+        </div>
+    </div>
+    <script>
+        function myFun(image,color,head,logo){
+        document.getElementById('myimage').src=image;
+        document.querySelector('.empty').style.backgroundColor=color;
+        document.getElementById('head').innerHTML=head;
+        document.getElementById('logobg').src=logo;
+        }
+    </script>
+
+    
+</body>
+</html>
